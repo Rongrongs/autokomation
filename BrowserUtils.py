@@ -20,7 +20,7 @@ koplakmenu = browser.get_element('//koplak')
 categorymenu = auto.browser.get_element( '//div[@class="pdp-shop__action-holder"]//span[contains(@class, "favorite__btn-fav")]' )
 categorymenu.click()
 
-run.execute_step( 'PAUSE',  )
+run.execute_step( 'pause',  )
 
 # Close Browser
 browser.close_browser()
