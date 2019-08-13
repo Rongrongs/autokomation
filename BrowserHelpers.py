@@ -14,7 +14,6 @@ run.config_browser( 'Firefox', url )
 # Open m.tokopedia.com
 
 auto.browser.open_url( url )
-auto.browser.open_url( url )
 
 koplakmenu = browser.get_element('//koplak')
 
