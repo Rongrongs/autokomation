@@ -17,6 +17,8 @@ auto.browser.openURL( url )
 #burgermenu = browser.getElement( '//button[@class="header__nav"]' )
 #burgermenu.click()
 
+koplakmenu = browser.getElement('//koplak')
+
 categorymenu = auto.browser.getElement( '//div[@class="pdp-shop__action-holder"]//span[contains(@class, "favorite__btn-fav")]' )
 categorymenu.click()
 
