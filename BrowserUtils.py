@@ -9,18 +9,18 @@ url = 'https://m.tokopedia.com/'
 browser = 'Firefox'
 
 # Configure Browser
-run.configBrowser( 'Firefox', url )
+run.config_browser( 'Firefox', url )
 
 # Open m.tokopedia.com
 
-auto.browser.openURL( url )
+auto.browser.open_url( url )
 
-koplakmenu = browser.getElement('//koplak')
+koplakmenu = browser.get_element('//koplak')
 
-categorymenu = auto.browser.getElement( '//div[@class="pdp-shop__action-holder"]//span[contains(@class, "favorite__btn-fav")]' )
+categorymenu = auto.browser.get_element( '//div[@class="pdp-shop__action-holder"]//span[contains(@class, "favorite__btn-fav")]' )
 categorymenu.click()
 
-run.executeStep( 'PAUSE',  )
+run.execute_step( 'PAUSE',  )
 
 # Close Browser
-browser.closeBrowser()
+browser.close_browser()
