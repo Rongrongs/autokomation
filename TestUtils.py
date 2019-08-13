@@ -10,29 +10,29 @@ class BrowserUtil():
     '''''''''''''''''''''
     Browser Management
     '''''''''''''''''''''
-    def configureBrowser( self, browserName, defaultUrl):
+    def configure_browser( self, browser_name, default_url):
         self.setDefaultBrowser( browserName )
         self.setDefaultURL( defaultUrl )
 
-    def setDefaultBrowser( self, browserName ):
+    def set_default_browser( self, browser_name ):
         self.defaultbrowser = browserName
 
-    def openBrowser( self ):
+    def open_browser( self ):
         if self.defaultbrowser == 'Firefox':
             self.browser = webdriver.Firefox()
         elif self.defaultbrowser == 'Chrome':
             self.browser = webdriver.Chrome()
 
-    def checkBrowserActive( self ):
+    def check_browser_active( self ):
         return self.browser is not None
 
-    def closeBrowser( self ):
+    def close_browser( self ):
         self.browser.quit()
 
-    def setDefaultURL( self, url ):
+    def set_default_url( self, url ):
         self.defaulturl = url
 
-    def openURL( self, url ):
+    def open_url( self, url ):
         # Check if Browser Still Inactive
         if not self.checkBrowserActive():
             self.openBrowser()
@@ -43,7 +43,7 @@ class BrowserUtil():
     '''''''''''''''''
     Browser Elements 
     '''''''''''''''''
-    def getElement( self, elementString ):
+    def get_element( self, elementString ):
         return self.browser.find_element_by_xpath( elementString )
 
     # def getElement( self, byType, elementString ):

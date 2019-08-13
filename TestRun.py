@@ -5,10 +5,10 @@ auto = Automation()
 
 class TestRun():
 
-    def configBrowser( self, defaultbrowser, defaulturl ):
+    def config_browser( self, defaultbrowser, defaulturl ):
         auto.browser.configureBrowser( defaultbrowser, defaulturl )
 
-    def executeStep( self, stepname, params ):
+    def execute_step( self, stepname, params ):
         callmethod = getattr( modules[__name__], stepname )
         callmethod( params )
 
@@ -22,11 +22,11 @@ class StepParam():
 
 class ActionRun():
 
-    def OPEN_BROWSER( self ):
+    def open_browser( self ):
         auto.browser.openBrowser()
 
-    def OPEN_URL( self, params ):
+    def open_url( self, params ):
         auto.browser.openURL( params.url )
 
-    def PAUSE( self, params ):
+    def pause( self, params ):
         auto.util.pause( params.duration )

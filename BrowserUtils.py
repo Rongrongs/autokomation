@@ -14,8 +14,6 @@ run.configBrowser( 'Firefox', url )
 # Open m.tokopedia.com
 
 auto.browser.openURL( url )
-#burgermenu = browser.getElement( '//button[@class="header__nav"]' )
-#burgermenu.click()
 
 koplakmenu = browser.getElement('//koplak')
 
